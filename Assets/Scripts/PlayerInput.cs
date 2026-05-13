@@ -2,13 +2,7 @@ using UnityEngine;
 
 public class PlayerInput : MonoBehaviour
 {
-    public Vector3 movementDirection;
-    [SerializeField] private float moveSpeed;
 
-    public Vector3 lookRotation;
-    [SerializeField] private float lookSpeed;
-
-    [SerializeField] private float jumpForce;
 
     private CharacterController characterController;
     private CustomPhysicsModule customPhysicsModule;
@@ -17,6 +11,10 @@ public class PlayerInput : MonoBehaviour
 
     void Awake()
     {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        
+
         characterController = GetComponent<CharacterController>();
         customPhysicsModule = GetComponent<CustomPhysicsModule>();
         shootingModule = GetComponent<ShootingModule>();
@@ -31,6 +29,15 @@ public class PlayerInput : MonoBehaviour
         HandleMoveInput();
         HandleShootInput();
     }
+
+
+    public Vector3 movementDirection;
+    [SerializeField] private float moveSpeed;
+
+    public Vector3 lookRotation;
+    [SerializeField] private float lookSpeed;
+
+    [SerializeField] private float jumpForce;
 
     private void HandleMoveInput()
     {

@@ -12,7 +12,11 @@ public class CustomPhysicsModule : MonoBehaviour
     {
         if( IsGrounded()  )
         {
-            upDownForce.y = 0;
+            if(upDownForce.y < 0)
+            {
+                upDownForce.y = 0;
+            }
+            
         }
         else
         {
@@ -22,6 +26,7 @@ public class CustomPhysicsModule : MonoBehaviour
             }
         }   
     }
+
     public void AddJumpForce(float force)
     {
         if( IsGrounded() )
