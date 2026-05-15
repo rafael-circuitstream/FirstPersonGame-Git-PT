@@ -7,11 +7,13 @@ public class DoorTrigger : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         doorAnimator.SetBool("IsOpen", true);
+
     }
 
     private void OnTriggerExit(Collider other)
     {
         doorAnimator.SetBool("IsOpen", false);
+        
     }
 
 

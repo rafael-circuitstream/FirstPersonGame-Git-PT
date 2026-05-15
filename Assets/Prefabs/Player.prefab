@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4157302792915410603}
   - component: {fileID: 5114927829945828914}
   - component: {fileID: 5870093833517025816}
+  - component: {fileID: 2532668409827641992}
   m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
@@ -139,6 +140,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ShootingModule
   weaponTip: {fileID: 763340616810152116}
   projectilePrefab: {fileID: 8219206088525808000, guid: 74793f8b1bcd54c43a53b7699c546942, type: 3}
+--- !u!114 &2532668409827641992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1744808595482519792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad5d0d8d44886e0459c4ecbac3b65f83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractionModule
+  rayOriginTransform: {fileID: 6810089444961160816}
+  interactionRange: 2.5
+  interactableLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &6308718196301991578
 GameObject:
   m_ObjectHideFlags: 0
