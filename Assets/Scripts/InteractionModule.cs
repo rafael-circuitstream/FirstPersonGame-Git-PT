@@ -33,6 +33,8 @@ public class InteractionModule : MonoBehaviour
     {
         if( highlightedInteraction != null)
         {
+            Debug.Log(Vector3.Distance(transform.position, highlightedInteraction.transform.position)); 
+
             Interactable interaction = highlightedInteraction.GetComponent<Interactable>();
             interaction.OnStartInteraction.Invoke();
 

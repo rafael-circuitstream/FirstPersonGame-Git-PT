@@ -5,8 +5,9 @@ public class Projectile : MonoBehaviour
     [SerializeField] private float projectileSpeed;
     [SerializeField] private Rigidbody projectileRigidbody;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public ProjectilePooling parentPool;
+
+    public void InitializeBullet()
     {
         projectileRigidbody.linearVelocity = transform.forward * projectileSpeed;
         Invoke("ResetProjectile", 8f);
@@ -14,6 +15,15 @@ public class Projectile : MonoBehaviour
 
     void ResetProjectile()
     {
-        Destroy(gameObject);
+        CancelInvoke();
+        projectileRigidbody.linearVelocity = Vector3.zero;
+        projectileRigidbody.angularVelocity = Vector3.zero;
+
+        parentPool.SetProjectileAvailable( this );
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        ResetProjectile();
     }
 }
