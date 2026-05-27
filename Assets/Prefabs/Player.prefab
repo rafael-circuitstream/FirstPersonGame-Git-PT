@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5114927829945828914}
   - component: {fileID: 5870093833517025816}
   - component: {fileID: 2532668409827641992}
+  - component: {fileID: 5811057429383515720}
   m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
@@ -139,7 +140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShootingModule
   weaponTip: {fileID: 763340616810152116}
-  projectilePrefab: {fileID: 8219206088525808000, guid: 74793f8b1bcd54c43a53b7699c546942, type: 3}
+  projectilePool: {fileID: 0}
 --- !u!114 &2532668409827641992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -157,6 +158,20 @@ MonoBehaviour:
   interactableLayer:
     serializedVersion: 2
     m_Bits: 64
+--- !u!114 &5811057429383515720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1744808595482519792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ecd49e35249db643b056eec1af6c12a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HealthModule
+  maxHealth: 100
+  currentHealth: 0
 --- !u!1 &6308718196301991578
 GameObject:
   m_ObjectHideFlags: 0

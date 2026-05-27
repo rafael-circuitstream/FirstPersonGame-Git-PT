@@ -20,6 +20,11 @@ public class GameManager : MonoBehaviour
         
     }
 
+    private void Start()
+    {
+        GetPlayer().GetComponent<HealthModule>().OnHealthZero += GameOver;
+
+    }
     public void UnfreezePlayer()
     {
         player.enabled = true;
@@ -39,5 +44,12 @@ public class GameManager : MonoBehaviour
     public PlayerInput GetPlayer()
     {
         return player;
+    }
+
+    private void GameOver()
+    {
+        FreezePlayer();
+        //Stop spawning enemies
+        //
     }
 }

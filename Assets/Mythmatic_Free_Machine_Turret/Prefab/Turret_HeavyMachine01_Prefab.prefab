@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5076717872328464351}
   - component: {fileID: 6634156900024212292}
+  - component: {fileID: 699584009821030344}
   m_Layer: 0
   m_Name: Turret_HeavyMachine01_Prefab
   m_TagString: Untagged
@@ -169,6 +170,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2f1039847296c541b85405e43999882, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TurretController
+--- !u!114 &699584009821030344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3226583421603586234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ecd49e35249db643b056eec1af6c12a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HealthModule
+  maxHealth: 50
+  currentHealth: 0
 --- !u!1 &6795079548319989463
 GameObject:
   m_ObjectHideFlags: 0

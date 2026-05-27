@@ -24,6 +24,6 @@ public class Projectile : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        ResetProjectile();
+        //ResetProjectile();
     }
 }
