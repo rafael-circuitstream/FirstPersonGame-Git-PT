@@ -30,7 +30,12 @@ public class InteractionModule : MonoBehaviour
         }
         else
         {
-            highlightedInteraction.layer = 6;
+
+            if(highlightedInteraction != null)
+            {
+                highlightedInteraction.layer = 6;
+            }
+
             highlightedInteraction = null;
 
             //NO INTERACTION FOUND
