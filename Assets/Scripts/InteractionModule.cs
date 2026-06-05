@@ -24,17 +24,19 @@ public class InteractionModule : MonoBehaviour
             Debug.Log("Press F to interact");
 
             highlightedInteraction = hitInfo.collider.gameObject;
-            highlightedInteraction.layer = 7;
+            
+            //highlightedInteraction.layer = 7;
+
             //NEW INTERACTION FOUND
             OnNewInteractionFound?.Invoke( highlightedInteraction );
         }
         else
         {
 
-            if(highlightedInteraction != null)
-            {
-                highlightedInteraction.layer = 6;
-            }
+            //if(highlightedInteraction != null)
+            //{
+            //    highlightedInteraction.layer = 6;
+            //}
 
             highlightedInteraction = null;
 
@@ -55,6 +57,7 @@ public class InteractionModule : MonoBehaviour
 
             Interactable interaction = highlightedInteraction.GetComponent<Interactable>();
             interaction.OnStartInteraction.Invoke();
+
 
             if(interaction is PickUpInteractable)
             {
